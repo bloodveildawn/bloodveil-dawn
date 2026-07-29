@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Bloodveil Dawn</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+content="width=device-width, initial-scale=0.5">
+
+    <title>Bloodveil Dawn</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111;
+    color:white;
+ padding:60px;
+    font-family:Arial;
+
+}
+
+.container{
+
+    width:1080px;
+
+    margin:auto;
+
+    display:flex;
+
+}
+
+/* KOLOM KIRI */
+.left{
+
+    width:50%;
+
+}
+
+/* IMAGE */
+.left img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* KOLOM KANAN */
+.right{
+
+    width:50%;
+
+    padding:40px;
+
+}
+
+.right h1{
+
+    font-size:60px;
+
+    margin-bottom:5px;
+
+}
+
+.right p{margin-bottom:10px;
+
+    line-height:1.3;
+
+}
+
+.genres {font-size:25px;}
+
+.desc {font-size:27px;}
+
+.label{
+
+    display:inline-block;
+    width:100px;
+    font-weight:bold;
+
+}
+
+button{
+margin-top:35px;
+
+    padding:15px 40px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+ border-radius:15px;
+
+}
+</style>
+
 <body>
-  <h1>Welcome to Bloodveil Dawn</h1>
-  <p>Diisi kapan2</p>
+
+<div class="container">
+
+    <div class="left">
+
+        <img src="test.jpg">
+
+    </div>
+
+    <div class="right">
+
+        <h1>Bloodveil Dawn</h1>
+
+        <p class="genres">
+            Fantasy • Action • Drama
+        </p>
+
+        <p class="desc"><span class="label">Type</span>: Series<br>
+        <span class="label">Status</span>: Ongoing
+            <br>
+        <span class="label">Genres</span>: Fantasy, Action, Drama
+            <br>
+        <span class="label">Author</span>: Scinister</p>
+
+        <button>READ FIRST CHAPTER</button>
+
+    </div>
+
+</div>
+
 </body>
-  
+
 </html>
