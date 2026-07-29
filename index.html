@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
 
-    <meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 
-    <title>Bloodveil Dawn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+<title>Bloodveil Dawn</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -23,43 +21,69 @@ body{
 
     background:#111;
     color:white;
- padding:60px;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
+
+    overflow-x:hidden;
 
 }
+
+/* =========================
+   CANVAS
+========================= */
+
+#app{
+
+    width:1200px;
+
+    transform-origin:top left;
+
+}
+
+/* =========================
+   CONTENT
+========================= */
 
 .container{
 
     width:1080px;
 
-    margin:auto;
+    margin:60px auto;
 
     display:flex;
 
+    gap:40px;
+
 }
 
-/* KOLOM KIRI */
+/* =========================
+   LEFT
+========================= */
+
 .left{
 
     width:50%;
 
 }
 
-/* IMAGE */
 .left img{
 
     width:100%;
 
     display:block;
 
+    border-radius:15px;
+
 }
 
-/* KOLOM KANAN */
+/* =========================
+   RIGHT
+========================= */
+
 .right{
 
     width:50%;
 
-    padding:40px;
+    padding:20px;
 
 }
 
@@ -71,68 +95,115 @@ body{
 
 }
 
-.right p{margin-bottom:10px;
+.genres{
 
-    line-height:1.3;
+    font-size:25px;
+
+    margin-bottom:30px;
 
 }
 
-.genres {font-size:25px;}
+.desc{
 
-.desc {font-size:27px;}
+    font-size:27px;
+
+    line-height:1.5;
+
+}
 
 .label{
 
     display:inline-block;
-    width:100px;
+
+    width:130px;
+
     font-weight:bold;
 
 }
 
 button{
-margin-top:35px;
+
+    margin-top:40px;
 
     padding:15px 40px;
 
-    font-size:30px;
+    font-size:28px;
+
+    border:none;
+
+    border-radius:15px;
 
     cursor:pointer;
 
- border-radius:15px;
-
 }
+
 </style>
+
+</head>
 
 <body>
 
+<div id="app">
+
 <div class="container">
 
-    <div class="left">
+<div class="left">
 
-        <img src="test.jpg">
-
-    </div>
-
-    <div class="right">
-
-        <h1>Bloodveil Dawn</h1>
-
-        <p class="genres">
-            Fantasy • Action • Drama
-        </p>
-
-        <p class="desc"><span class="label">Type</span>: Series<br>
-        <span class="label">Status</span>: Ongoing
-            <br>
-        <span class="label">Genres</span>: Fantasy, Action, Drama
-            <br>
-        <span class="label">Author</span>: Scinister</p>
-
-        <button>READ FIRST CHAPTER</button>
-
-    </div>
+<img src="https://res.cloudinary.com/q8roiivv/image/upload/154.jpg">
 
 </div>
+
+<div class="right">
+
+<h1>Bloodveil Dawn</h1>
+
+<p class="genres">
+
+Fantasy • Action • Drama
+
+</p>
+
+<p class="desc">
+
+<span class="label">Type</span>: Series<br>
+
+<span class="label">Status</span>: Ongoing<br>
+
+<span class="label">Genres</span>: Fantasy, Action, Drama<br>
+
+<span class="label">Author</span>: Scinister
+
+</p>
+
+<button>READ FIRST CHAPTER</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const DESIGN_WIDTH = 1200;
+
+function updateScale(){
+
+    const app = document.getElementById("app");
+
+    const scale = Math.min(window.innerWidth / DESIGN_WIDTH,1);
+
+    app.style.transform = `scale(${scale})`;
+
+    document.body.style.height = (app.offsetHeight * scale) + "px";
+
+}
+
+window.addEventListener("resize",updateScale);
+
+updateScale();
+
+</script>
 
 </body>
 
