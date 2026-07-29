@@ -8,13 +8,13 @@ url:"chapter1.html"
 
 {
 number:2,
-title:"The Journey Begins",
+title:"Beneath The Surface",
 url:"chapter2.html"
 },
 
 {
 number:3,
-title:"A New Enemy",
+title:"TBD",
 url:"chapter3.html"
 }
 
