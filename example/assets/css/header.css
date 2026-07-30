@@ -1,6 +1,1 @@
-#header{position:fixed;top:0;left:0;width:100%;height:72px;background:#111;border-bottom:1px solid rgba(255,255,255,.08);transition:transform .3s ease;z-index:1000}
-#header.hide{transform:translateY(-100%)}
-.header-inner{max-width:1200px;height:100%;margin:auto;display:flex;align-items:center}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo{width:38px;height:38px}.wordmark{height:28px}
-body{padding-top:72px;}
+#bv-header{position:fixed;top:0;left:0;width:100%;height:72px;transition:.3s;z-index:999;background:transparent}#bv-header.solid{background:rgba(15,15,15,.8);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}#bv-header.hide{transform:translateY(-100%)}.inner{max-width:1200px;height:100%;margin:auto;display:flex;align-items:center}.brand{display:flex;gap:14px;align-items:center}.logo{width:38px;height:38px}.wordmark{height:28px}body{padding-top:72px}
