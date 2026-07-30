@@ -13,7 +13,7 @@ const option = document.createElement("option");
 option.value = chapter.url;
 
 option.textContent =
-`Chapter ${chapter.number} - ${chapter.title}`;
+{chapter.title};
 
 select.appendChild(option);
 
