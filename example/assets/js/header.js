@@ -1,1 +1,8 @@
-class SiteHeader extends HTMLElement{connectedCallback(){this.innerHTML='<header id="bv-header"><div class="inner"><a class="brand" href="'+LINKS.home+'"><img class="logo" src="/../images/home-logo.png"><img class="wordmark" src="/../images/bloodveil.png"></a></div></header>';let last=0,h=this.querySelector('#bv-header');addEventListener('scroll',()=>{let y=scrollY;h.classList.toggle('solid',y>20);if(y>last&&y>90)h.classList.add('hide');else h.classList.remove('hide');last=y;});}};customElements.define('site-header',SiteHeader);
+let last=0;
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{
+ const y=window.scrollY;
+ if(y>last && y>80){header.classList.add('hide');}
+ else{header.classList.remove('hide');}
+ last=y<=0?0:y;
+});

@@ -1,1 +1,0 @@
-window.LINKS={home:'/index.html'};
