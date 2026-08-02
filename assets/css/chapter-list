@@ -1,0 +1,255 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#111;
+
+    color:#eeeeee;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(1080px,92%);
+
+    margin:auto;
+
+    padding-top:120px;
+
+    padding-bottom:80px;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:32px;
+
+    align-items:start;
+
+}
+
+/* ==========================================================
+   COVER
+========================================================== */
+
+.cover{
+
+    width:300px;
+
+}
+
+.cover img{
+
+    display:block;
+
+    width:100%;
+
+    border:2px solid crimson;
+
+}
+
+/* ==========================================================
+   RIGHT SIDE
+========================================================== */
+
+.kanan{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:400px;
+
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.title{
+
+    font-size:38px;
+
+    margin-bottom:24px;
+
+}
+
+/* ==========================================================
+   META
+========================================================== */
+
+.meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.meta-row{
+
+    display:grid;
+
+    grid-template-columns:120px 20px 1fr;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.buttons{
+
+    display:grid;
+
+    gap:16px;
+
+    width:320px;
+
+    margin-top:32px;
+
+}
+
+.buttons button{
+
+    padding:15px;
+
+    background:#222;
+
+    color:white;
+
+    border:1px solid #8b4b4b;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.buttons button:hover{
+
+    background:crimson;
+
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+section{
+
+    margin-top:70px;
+
+}
+
+section h2{
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card{
+
+    padding:18px 0;
+
+    border-top:1px solid #333;
+
+}
+
+.card h3{
+
+    margin:10px 0;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+    .container{
+
+        padding-top:110px;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+    }
+
+    .cover{
+
+        width:300px;
+
+    }
+
+    .kanan{
+
+        width:100%;
+
+        min-height:auto;
+
+    }
+
+    .title{
+
+        text-align:left;
+
+    }
+
+    .meta{
+
+        text-align:left;
+
+    }
+
+    .buttons{
+
+        margin:32px auto 0;
+
+    }
+
+}
