@@ -1,0 +1,200 @@
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:#111111;
+
+    border-bottom:1px solid #222;
+
+    z-index:1000;
+
+}
+
+.header-container{
+
+    width:min(1200px,90%);
+
+    height:100%;
+
+    margin:0 auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.nav-link{
+
+    position:relative;
+
+    color:#ffffff;
+
+    transition:.3s;
+
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.nav-link:hover{
+
+    color:#d62b2b;
+
+}
+
+/* =========================================================
+   UNDERLINE DEFAULT
+========================================================= */
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#d62b2b;
+
+    transition:.3s;
+
+    transform:translateX(-50%);
+
+}
+
+/* =========================================================
+   UNDERLINE HOVER
+========================================================= */
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.nav-link.active{
+
+    color:#ffffff;
+
+}
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:30px;
+
+    color:#ffffff;
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .navbar{
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+        background:#111111;
+
+        border-top:1px solid #222;
+
+        display:none;
+
+        flex-direction:column;
+
+        gap:30px;
+
+        padding:30px;
+
+    }
+
+    .navbar.show{
+
+        display:flex;
+
+    }
+
+}
