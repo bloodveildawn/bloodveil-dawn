@@ -8,211 +8,7 @@
 
 <title>Bloodveil Dawn</title>
 <link rel="icon" href="assets/image/favicon.png">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    background:#111;
-    color:white;
-    font-family:Arial, sans-serif;
-
-}
-
-/* ===========================
-   PAGE
-=========================== */
-
-.container{
-
-    width:90%;
-    max-width:1080px;
-
-    margin:60px auto;
-
-    display:flex;
-
-    gap:50px;
-
-    align-items:stretch;
-
-}
-
-/* ===========================
-   LEFT
-=========================== */
-
-.left{
-
-    width:50%;
-
-}
-
-.left img{
-
-    width:100%;
-
-    aspect-ratio:3 / 4;
-
-    object-fit:cover;
-
-    display:block;
-
-    border-radius:15px;
-
-}
-
-/* ===========================
-   RIGHT
-=========================== */
-
-.right{
-
-    width:50%;
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.top{
-
-}
-
-.bottom{
-
-    margin-top:auto;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-}
-
-h1{
-
-    font-size:60px;
-
-    margin-bottom:8px;
-
-}
-
-.genres{
-
-    font-size:25px;
-
-    margin-bottom:25px;
-
-}
-
-.info{
-
-    margin-bottom:30px;
-
-}
-
-.info p{
-
-    font-size:27px;
-
-    line-height:1.6;
-
-}
-
-.label{
-
-    display:inline-block;
-
-    width:130px;
-
-    font-weight:bold;
-
-}
-
-button{
-
-    padding:18px;
-
-    font-size:26px;
-
-    font-weight:bold;
-
-    border:none;
-
-    border-radius:15px;
-
-    cursor:pointer;
-
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-.container{
-
-    width:95%;
-
-    margin:20px auto;
-
-    gap:18px;
-
-}
-
-h1{
-
-    font-size:34px;
-
-}
-
-.genres{
-
-    font-size:18px;
-
-    margin-bottom:18px;
-
-}
-
-.info{
-
-    margin-bottom:20px;
-
-}
-
-.info p{
-
-    font-size:16px;
-
-}
-
-.label{
-
-    width:80px;
-
-}
-
-button{
-
-    padding:9px;
-
-    font-size:14px;
-
-}
-
-}
-
-</style>
+    <link rel="stylesheet" href="chapter-list.css">
 
 </head>
 
@@ -220,53 +16,111 @@ button{
 
 <div class="container">
 
-<div class="left">
+    <div class="hero">
 
-<img src="https://res.cloudinary.com/q8roiivw/image/upload/cover.jpg">
+        <div class="cover">
 
-</div>
+            <img src="https://res.cloudinary.com/q8roiivw/image/upload/cover.jpg">
 
-<div class="right">
+        </div>
 
-<div class="top">
+        <div class="kanan">
 
-<h1>Bloodveil Dawn</h1>
+            <div class="info">
 
-<p class="genres">
-Fantasy • Action • Drama
-</p>
+                <div class="title">
 
-<div class="info">
+                    <strong>Bloodveil Dawn</strong>
 
-<p><span class="label">Type</span>: Series</p>
+                </div>
 
-<p><span class="label">Status</span>: Ongoing</p>
+                <div class="meta">
 
-<p><span class="label">Genres</span>: Fantasy, Action, Drama</p>
+                    <div class="meta-row">
+                        <strong>Type</strong>
+                        <span>:</span>
+                        <span>Series</span>
+                    </div>
 
-<p><span class="label">Author</span>: Scinister</p>
+                    <div class="meta-row">
+                        <strong>Status</strong>
+                        <span>:</span>
+                        <span>Ongoing</span>
+                    </div>
 
-</div>
+                    <div class="meta-row">
+                        <strong>Genre</strong>
+                        <span>:</span>
+                        <span>Fantasy • Action • Drama</span>
+                    </div>
 
-</div>
+                    <div class="meta-row">
+                        <strong>Demographic</strong>
+                        <span>:</span>
+                        <span>Seinen</span>
+                    </div>
 
-<div class="bottom">
+                    <div class="meta-row">
+                        <strong>Published</strong>
+                        <span>:</span>
+                        <span>2026</span>
+                    </div>
 
-<button>
-READ FIRST CHAPTER
-</button>
+                    <div class="meta-row">
+                        <strong>Author</strong>
+                        <span>:</span>
+                        <span>Scinister</span>
+                    </div>
 
-<button>
-READ LATEST CHAPTER
-</button>
+                </div>
 
-<button>
-SUPPORT THE AUTHOR
-</button>
+            </div>
 
-</div>
+            <div class="buttons">
 
-</div>
+                <button>Read First</button>
+
+                <button>Read Latest</button>
+
+                <button>Support</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section>
+
+        <h2>Synopsis</h2>
+
+        <p>Synopsis placeholder...</p>
+
+    </section>
+
+    <section>
+
+        <h2>Chapters</h2>
+
+        <div class="card">
+
+            <span>NEW</span>
+
+            <h3>1st Dawn — Beast of Hell</h3>
+
+            <p>Placeholder description.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>2nd Dawn</h3>
+
+            <p>Placeholder description.</p>
+
+        </div>
+
+    </section>
 
 </div>
 
