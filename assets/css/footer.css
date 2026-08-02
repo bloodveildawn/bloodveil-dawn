@@ -1,202 +1,92 @@
 /* ==========================================================
-   RESET
+   FOOTER
 ========================================================== */
 
-*{
+.footer{
 
-    margin:0;
+    margin-top:80px;
 
-    padding:0;
+    border-top:1px solid #2a2a2a;
 
-    box-sizing:border-box;
-
-}
-
-body{
-
-    background:#111;
-
-    color:#eeeeee;
-
-    font-family:Arial, Helvetica, sans-serif;
+    background:#111111;
 
 }
 
 /* ==========================================================
-   MAIN CONTAINER
+   CONTAINER
 ========================================================== */
 
-.container{
+.footer-container{
 
-    width:min(1080px,92%);
+    width:min(1200px,92%);
 
     margin:auto;
 
-    padding-top:120px;
-
-    padding-bottom:80px;
-
-}
-
-/* ==========================================================
-   HERO
-========================================================== */
-
-.hero{
-
-    display:grid;
-
-    grid-template-columns:300px 1fr;
-
-    gap:32px;
-
-    align-items:start;
-
-}
-
-/* ==========================================================
-   COVER
-========================================================== */
-
-.cover{
-
-    width:300px;
-
-}
-
-.cover img{
-
-    display:block;
-
-    width:100%;
-
-    border:2px solid crimson;
-
-}
-
-/* ==========================================================
-   RIGHT SIDE
-========================================================== */
-
-.kanan{
+    padding:50px 0;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:space-between;
+    align-items:center;
 
-    min-height:400px;
-
-}
-
-/* ==========================================================
-   TITLE
-========================================================== */
-
-.title{
-
-    font-size:38px;
-
-    margin-bottom:24px;
+    gap:25px;
 
 }
 
 /* ==========================================================
-   META
+   BRAND
 ========================================================== */
 
-.meta{
+.footer-brand{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.footer-links{
 
     display:flex;
 
-    flex-direction:column;
+    gap:24px;
 
-    gap:8px;
+    flex-wrap:wrap;
 
-}
-
-.meta-row{
-
-    display:grid;
-
-    grid-template-columns:120px 20px 1fr;
+    justify-content:center;
 
 }
 
-/* ==========================================================
-   BUTTONS
-========================================================== */
+.footer-links a{
 
-.buttons{
+    color:#cccccc;
 
-    display:grid;
-
-    gap:16px;
-
-    width:320px;
-
-    margin-top:32px;
-
-}
-
-.buttons button{
-
-    padding:15px;
-
-    background:#222;
-
-    color:white;
-
-    border:1px solid #8b4b4b;
-
-    border-radius:14px;
-
-    cursor:pointer;
+    text-decoration:none;
 
     transition:.25s;
 
 }
 
-.buttons button:hover{
+.footer-links a:hover{
 
-    background:crimson;
-
-}
-
-/* ==========================================================
-   SECTION
-========================================================== */
-
-section{
-
-    margin-top:70px;
-
-}
-
-section h2{
-
-    margin-bottom:20px;
-
-    font-size:24px;
+    color:crimson;
 
 }
 
 /* ==========================================================
-   CARD
+   COPYRIGHT
 ========================================================== */
 
-.card{
+.footer-copyright{
 
-    padding:18px 0;
+    color:#8d8d8d;
 
-    border-top:1px solid #333;
-
-}
-
-.card h3{
-
-    margin:10px 0;
+    font-size:14px;
 
 }
 
@@ -206,49 +96,15 @@ section h2{
 
 @media(max-width:768px){
 
-    .container{
+    .footer-container{
 
-        padding-top:110px;
-
-    }
-
-    .hero{
-
-        grid-template-columns:1fr;
-
-        justify-items:center;
+        padding:40px 20px;
 
     }
 
-    .cover{
+    .footer-links{
 
-        width:300px;
-
-    }
-
-    .kanan{
-
-        width:100%;
-
-        min-height:auto;
-
-    }
-
-    .title{
-
-        text-align:left;
-
-    }
-
-    .meta{
-
-        text-align:left;
-
-    }
-
-    .buttons{
-
-        margin:32px auto 0;
+        gap:18px;
 
     }
 
