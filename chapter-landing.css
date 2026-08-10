@@ -868,6 +868,13 @@ button {
         margin: 0 auto 28px;
     }
 
+    .cover-badge {
+        top: 12px;
+        left: 12px;
+        padding: 8px 14px;
+        font-size: .68rem;
+    }
+
     .hero-info {
         max-width: 100%;
     }
