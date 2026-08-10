@@ -1,0 +1,588 @@
+/* ==========================================================================
+   Bloodveil Dawn
+   Chapter Reader
+   ========================================================================== */
+
+
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
+
+*{
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    margin:0;
+
+    background:#000000;
+
+    color:#e8e1e1;
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+}
+
+
+/* ==========================================================================
+   COMIC READER
+   ========================================================================== */
+
+.reader-container{
+
+    width:100%;
+
+    max-width:1080px;
+
+    margin:0 auto;
+
+    padding:
+        80px 0 0;
+
+    background:#000000;
+}
+
+
+/* ==========================================================================
+   COMIC IMAGES
+   ========================================================================== */
+
+.reader-container img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    margin-top:4px;
+
+    padding:0;
+
+    border:0;
+
+}
+
+
+/* ==========================================================================
+   READER END
+
+   Sedikit lebih terang dari pure-black
+   comic area.
+
+   ========================================================================== */
+
+.reader-end{
+
+    width:100%;
+
+    padding:
+        70px 24px 90px;
+
+    background:#0F1014;
+
+    border-top:
+        1px solid
+        rgba(183, 46, 60, 0.22);
+
+}
+
+
+/* ==========================================================================
+   END CONTENT WIDTH
+   ========================================================================== */
+
+.reader-end-inner{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+}
+
+
+/* ==========================================================================
+   CONTINUE READING CARD
+   ========================================================================== */
+
+.continue-card{
+
+    width:100%;
+
+    min-height:120px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border:
+        1px solid #2B2E37;
+
+    border-radius:12px;
+
+    background:#1A1C22;
+
+    color:#F2F2F2;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.continue-card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:
+        #C43737;
+}
+
+
+/* ==========================================================================
+   CONTINUE THUMBNAIL
+   ========================================================================== */
+
+.continue-thumbnail{
+
+    width:130px;
+
+    height:120px;
+
+    flex:0 0 130px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/* ==========================================================================
+   CONTINUE TEXT
+   ========================================================================== */
+
+.continue-content{
+
+    padding:
+        20px 26px;
+
+}
+
+
+.continue-label{
+
+    margin:0 0 7px;
+
+    color:#A6ABB5;
+
+    font-size:13px;
+
+    line-height:1.7;
+    
+    transition: color .25s ease;
+
+}
+
+
+.continue-title{
+
+    margin:0;
+
+    color:#e2e2e2;
+
+    font-size:20px;
+
+    font-weight:650;
+
+    line-height:1.35;
+
+}
+
+.continue-arrow {
+    width: 11px;
+    height: 11px;
+
+    margin-left: auto;
+    margin-right: 28px;
+
+    flex: 0 0 11px;
+
+    border-top: 4px solid #8C9099;
+
+    border-right: 4px solid #8C9099;
+
+    transform: rotate(45deg);
+
+    transition: 
+        transform 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+.continue-card:hover .continue-label {color:#d64a59;}
+.continue-card:hover .continue-title {color: #f7f7f7;}
+.continue-card:hover .continue-arrow {border-color: #d64a59cc;
+    
+    transform:
+        translateX(3px)
+        rotate(45deg);
+    
+}
+
+/* ==========================================================================
+   SUPPORT / SOCIAL GRID
+   ========================================================================== */
+
+.end-cards{
+
+    margin-top:24px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    border:
+        1px solid #2B2E37;
+
+    background:#1A1C22;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+}
+
+
+/* ==========================================================================
+   END CARD
+   ========================================================================== */
+
+.end-card{
+
+    min-height:180px;
+
+    padding:
+        30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background: transparent;
+
+}
+
+
+.end-card + .end-card {position: relative;}
+
+
+.end-card + .end-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+
+    background: #2B2E37;
+
+}
+
+
+.end-card h2{
+
+    margin:
+        0 0 10px;
+
+    color:#F2F2F2;
+
+    font-size:19px;
+
+    font-weight:650;
+
+}
+
+
+.end-card p{
+
+    max-width:360px;
+
+    margin:
+        0 0 22px;
+
+    color:#A6ABB5;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================================================
+   SUPPORT BUTTON
+   ========================================================================== */
+
+.support-button{
+
+    max-height:42px;
+
+    padding:
+        0 10px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        1px solid
+        rgba(183, 46, 60, 0.50);
+
+    border-radius:7px;
+
+    background:
+       #C43737;
+
+    color:#e7dddd;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight: 860;
+
+    letter-spacing: 0.05rem;
+
+    gap: 4px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.25s ease;
+
+}
+
+.support-button img{
+    height: 70%;
+
+}
+
+
+.support-button:hover{
+
+    background:
+       #e16d1d;
+
+    border-color:#e16d1d;
+
+    color:#ffffff;
+
+    transform: translateY(-1.5px);
+
+}
+
+
+/* ==========================================================================
+   SOCIAL LINKS
+   ========================================================================== */
+
+.social-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:9px;
+
+}
+
+
+.social-links img{
+
+    max-height: 42px;
+
+    border-radius: 7px;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+
+}
+
+
+.social-links img:hover{
+
+    opacity: 0.6;
+
+    transform: translateY(-1.5px);
+}
+
+
+/* ==========================================================================
+   LATEST CHAPTER STATE
+   ========================================================================== */
+
+.continue-card.latest{
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+.continue-card.latest
+.continue-content{
+
+    padding:
+        28px;
+
+}
+
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width:700px){
+
+    .reader-container{
+
+        padding-top:68px;
+
+    }
+
+
+    .reader-end{
+
+        padding:
+            50px 14px 70px;
+
+    }
+
+
+    .continue-card{
+
+        min-height:96px;
+
+    }
+
+
+    .continue-thumbnail{
+
+        width:95px;
+
+        height:96px;
+
+        flex-basis:95px;
+
+    }
+
+
+    .continue-content{
+
+        padding:
+            15px 17px;
+
+    }
+
+
+    .continue-label{
+
+        margin-bottom:5px;
+
+        font-size:11px;
+
+    }
+
+
+    .continue-title{
+
+        font-size:15px;
+
+    }
+
+
+    .end-cards{
+
+        background: transparent;
+
+        border: 0;
+
+        border-radius: 0;
+
+        overflow: visible;
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+        box-shadow: none;
+
+    }
+
+
+    .end-card{
+
+        min-height:165px;
+
+        padding:
+            24px 18px;
+
+        border:
+        1px solid #2B2E37;
+
+        background:#1A1C22;
+
+        border-radius: 12px;
+
+    }
+
+    .end-card + .end-card {
+
+        border: 1px solid rgba(220, 210, 210, 0.10);
+    }
+
+}
