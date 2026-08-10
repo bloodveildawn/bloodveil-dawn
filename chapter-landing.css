@@ -870,8 +870,8 @@ button {
 
     
     .cover-badge {
-        top: 12px;
-        left: 12px;
+        top: 10px;
+        left: 10px;
         padding: 8px 14px;
         font-size: .68rem;
     }
