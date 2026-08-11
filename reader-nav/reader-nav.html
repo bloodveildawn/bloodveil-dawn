@@ -1,0 +1,175 @@
+<!--
+==========================================================================
+Bloodveil Dawn
+Reader Navigation Component
+==========================================================================
+
+Isi:
+
+- Chapter List
+- Previous
+- Custom Chapter Dropdown
+- Next
+- Back to Top
+
+Navigation ini dipakai oleh semua chapter.
+
+==========================================================================
+-->
+
+<nav
+    class="reader-nav"
+    id="readerNav"
+    aria-label="Reader navigation">
+
+
+    <div class="reader-nav-inner">
+
+
+        <!-- ==============================================================
+             CHAPTER LIST
+             ============================================================== -->
+
+        <a
+            href="../chapter-landing.html"
+            class="reader-home"
+            aria-label="Back to Chapter List"
+            title="Back to Chapter List">
+
+            <span
+                class="reader-home-icon"
+                aria-hidden="true">
+
+                ⌂
+
+            </span>
+
+        </a>
+
+
+
+        <!-- ==============================================================
+             PREVIOUS
+             ============================================================== -->
+
+        <a
+            href="#"
+            class="reader-nav-button reader-prev"
+            id="readerPrev"
+            aria-label="Previous Chapter">
+
+            <span class="desktop-only">
+                ◀ Previous
+            </span>
+
+            <span
+                class="mobile-only"
+                aria-hidden="true">
+
+                ◀
+
+            </span>
+
+        </a>
+
+
+
+        <!-- ==============================================================
+             CUSTOM CHAPTER DROPDOWN
+             ============================================================== -->
+
+        <div
+            class="chapter-dropdown"
+            id="chapterDropdown">
+
+
+            <button
+                type="button"
+                class="chapter-dropdown-button"
+                id="chapterDropdownButton"
+                aria-haspopup="listbox"
+                aria-expanded="false">
+
+                <span
+                    id="chapterDropdownLabel">
+
+                    Chapter
+
+                </span>
+
+                <span
+                    class="chapter-dropdown-arrow"
+                    aria-hidden="true">
+
+                    ▾
+
+                </span>
+
+            </button>
+
+
+            <div
+                class="chapter-dropdown-menu"
+                id="chapterDropdownMenu"
+                role="listbox"
+                aria-label="Select chapter">
+
+                <!--
+                    Options dibuat otomatis oleh JavaScript.
+                -->
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================================================
+             NEXT
+             ============================================================== -->
+
+        <a
+            href="#"
+            class="reader-nav-button reader-next"
+            id="readerNext"
+            aria-label="Next Chapter">
+
+            <span class="desktop-only">
+                Next ▶
+            </span>
+
+            <span
+                class="mobile-only"
+                aria-hidden="true">
+
+                ▶
+
+            </span>
+
+        </a>
+
+
+
+        <!-- ==============================================================
+             BACK TO TOP
+             ============================================================== -->
+
+        <button
+            type="button"
+            class="reader-nav-button reader-top"
+            id="readerTop"
+            aria-label="Back to Top">
+
+            ↑
+
+            <span class="desktop-only">
+                Top
+            </span>
+
+        </button>
+
+
+    </div>
+
+</nav>
