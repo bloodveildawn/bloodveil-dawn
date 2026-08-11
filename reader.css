@@ -96,7 +96,7 @@ body{
 
     border-top:
         1px solid
-        rgba(183, 46, 60, 0.22);
+        #2B2E37;
 
 }
 
@@ -441,7 +441,7 @@ body{
 
 .social-links img{
 
-    max-height: 42px;
+    max-height: 38px;
 
     border-radius: 7px;
 
@@ -486,7 +486,7 @@ body{
    MOBILE
    ========================================================================== */
 
-@media (max-width:700px){
+@media (max-width:768px){
 
     .reader-container{
 
@@ -505,18 +505,16 @@ body{
 
     .continue-card{
 
-        min-height:96px;
+        max-height:120px;
 
     }
 
 
     .continue-thumbnail{
 
-        width:95px;
+        width:120px;
 
-        height:96px;
-
-        flex-basis:95px;
+        flex-basis:120px;
 
     }
 
@@ -524,7 +522,7 @@ body{
     .continue-content{
 
         padding:
-            15px 17px;
+            10px 17px;
 
     }
 
@@ -533,14 +531,14 @@ body{
 
         margin-bottom:5px;
 
-        font-size:11px;
+        font-size:12px;
 
     }
 
 
     .continue-title{
 
-        font-size:15px;
+        font-size:18px;
 
     }
 
@@ -583,6 +581,10 @@ body{
     .end-card + .end-card {
 
         border: 1px solid rgba(220, 210, 210, 0.10);
+    }
+
+    .social-links img {
+        height: 35px;
     }
 
 }
