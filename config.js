@@ -47,7 +47,7 @@ const readerConfig = {
             number: 3,
 
             title:
-                "3rd Dawn: A Silenced Warmth Amidst a Howling Storm",
+                "3rd Dawn: A Silenced Warmth Amidst a Roaring Storm",
 
             url:
                 "003.html",

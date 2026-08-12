@@ -90,7 +90,7 @@ const chapters = [
     {
         id: 3,
         number: "3rd Dawn - Incomplete",
-        title: "A Silenced Warmth Amidst a Howling Storm",
+        title: "A Silenced Warmth Amidst a Roaring Storm",
         version: "rough",
         date: "Updated 23 July 2026",
         thumbnail: "images/003.jpg",
