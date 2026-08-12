@@ -1,16 +1,6 @@
 /* ==========================================================================
    Bloodveil Dawn
    Reader Configuration
-   ==========================================================================
-
-   Semua data chapter disimpan di sini.
-
-   Untuk menambah chapter baru:
-   cukup tambahkan object baru ke array chapters.
-
-   Reader navigation dan Continue Reading
-   akan membaca data ini secara otomatis.
-
    ========================================================================== */
 
 const readerConfig = {

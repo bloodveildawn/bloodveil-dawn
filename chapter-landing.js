@@ -2,15 +2,6 @@
 /* CHAPTER DATA */
 /* ========================================= */
 
-/*
-    Semua informasi chapter disimpan di sini.
-
-    Kalau nanti mau menambah chapter baru,
-    cukup tambahkan satu object ke array ini.
-
-    HTML tidak perlu diedit.
-*/
-
 const chapters = [
 
     {
@@ -121,17 +112,6 @@ const CONFIG = {
 /* TRANSITION CONFIG */
 /* ========================================= */
 
-/*
-    Pengaturan khusus untuk animasi
-    View All / Show Less.
-
-    Tidak ada opacity,
-    flash,
-    scale,
-    atau efek cahaya.
-
-    Hanya perubahan tinggi container.
-*/
 
 const TRANSITION_CONFIG = {
 
@@ -170,11 +150,6 @@ const state = {
 /* ========================================= */
 /* TRANSITION STATE */
 /* ========================================= */
-
-/*
-    Menandai apakah chapter list sedang
-    menjalankan expand/collapse transition.
-*/
 
 let isChapterListTransitioning = false;
 
@@ -230,22 +205,6 @@ const sortOptions =
 /* ========================================= */
 /* CREATE CHAPTER CARD */
 /* ========================================= */
-
-/*
-    Struktur card:
-
-    chapter-card
-    ├── thumbnail
-    └── chapter-info
-        ├── chapter number
-        ├── title
-        ├── synopsis
-        └── date
-
-    Date sengaja berada di dalam chapter-info
-    supaya mobile bisa menampilkannya tepat
-    di bawah title tanpa membuat grid row baru.
-*/
 
 function createChapterCard(chapter) {
 
@@ -399,11 +358,6 @@ function createChapterCard(chapter) {
 /* GET CURRENT CHAPTERS */
 /* ========================================= */
 
-/*
-    Mengambil chapter berdasarkan version
-    yang sedang aktif.
-*/
-
 function getCurrentChapters() {
 
     return chapters.filter(
@@ -422,14 +376,6 @@ function getCurrentChapters() {
 /* ========================================= */
 /* SORT CHAPTERS */
 /* ========================================= */
-
-/*
-    Sort tidak mengubah data asli.
-
-    Kita membuat copy terlebih dahulu
-    supaya `chapters` tetap menjadi
-    sumber data utama.
-*/
 
 function getSortedChapters() {
 
@@ -470,13 +416,6 @@ function getSortedChapters() {
 /* GET CHAPTER LIST HEIGHT */
 /* ========================================= */
 
-/*
-    Mengambil tinggi aktual chapter list.
-
-    Ini yang nanti dipakai sebagai titik
-    awal / akhir animasi expand dan collapse.
-*/
-
 function getChapterListHeight() {
 
     return chapterList.scrollHeight;
@@ -488,31 +427,6 @@ function getChapterListHeight() {
 /* UPDATE CHAPTER LIST */
 /* ========================================= */
 
-/*
-    Memperbarui isi chapter list tanpa
-    langsung menghancurkan seluruh DOM.
-
-    Ini penting untuk transition.
-
-    Card yang sudah ada akan dipertahankan
-    kalau masih mewakili chapter yang sama.
-*/
-
-/* ========================================= */
-/* UPDATE CHAPTER LIST */
-/* ========================================= */
-
-/*
-    Memperbarui chapter list sambil menjaga
-    card dari version yang sedang aktif.
-
-    Card version lama akan dibuang.
-
-    Card tambahan dari version aktif tetap
-    dipertahankan ketika diperlukan untuk
-    collapse transition.
-*/
-
 function updateChapterList(
     visibleChapters,
     mode = "instant"
@@ -521,12 +435,6 @@ function updateChapterList(
     /* ========================================= */
     /* REMOVE OLD VERSION CARDS */
     /* ========================================= */
-
-    /*
-        Jangan biarkan card Final lama
-        tertinggal ketika pindah ke Rough,
-        atau sebaliknya.
-    */
 
     Array.from(
         chapterList.children
@@ -558,7 +466,7 @@ function updateChapterList(
 
 
             /*
-                Belum ada card pada posisi ini.
+                Belum ada card di posisi ini.
             */
 
             if (!card) {
@@ -577,8 +485,8 @@ function updateChapterList(
 
 
             /*
-                Card pada posisi ini tidak
-                sesuai dengan chapter yang
+                Card di posisi ini gak
+                sesuai sama chapter yang
                 seharusnya.
             */
 
@@ -613,7 +521,7 @@ function updateChapterList(
 
 
             /*
-                Card yang dibutuhkan harus terlihat.
+                Card yang dibutuhin harus terlihat.
             */
 
             card.hidden =
@@ -686,10 +594,10 @@ function updateChapterList(
 
         /*
             Untuk collapse, card tambahan
-            sengaja TIDAK disembunyikan dulu.
+            sengaja gak disembunyiin dulu.
 
-            animateChapterList() yang akan
-            menghitung target height dengan
+            animateChapterList() yang bakal
+            hitung target height dengan
             benar sebelum transition.
         */
 
@@ -719,14 +627,6 @@ function updateChapterList(
 /* ========================================= */
 /* UPDATE VIEW ALL BUTTON */
 /* ========================================= */
-
-/*
-    Behavior tombol tetap sama seperti
-    baseline sebelumnya.
-
-    Hanya namanya yang berubah ketika
-    expanded.
-*/
 
 function updateViewAllButton(
     totalChapters,
@@ -766,23 +666,6 @@ function updateViewAllButton(
 /* ========================================= */
 /* RENDER CHAPTERS */
 /* ========================================= */
-
-/*
-    Menampilkan chapter berdasarkan:
-
-    1. Version
-    2. Sort
-    3. Expanded state
-
-    `mode` menentukan apakah perubahan
-    dilakukan secara instant atau memakai
-    expand/collapse transition.
-
-    mode:
-        "instant"
-        "expand"
-        "collapse"
-*/
 
 function renderChapters(
     mode = "instant"
@@ -867,33 +750,6 @@ function renderChapters(
 /* ANIMATE CHAPTER LIST */
 /* ========================================= */
 
-/*
-    Menganimasikan perubahan tinggi
-    chapter list.
-
-    Tidak menggunakan:
-        - opacity
-        - scale
-        - flash
-        - efek cahaya
-
-    Hanya height transition.
-*/
-
-/* ========================================= */
-/* ANIMATE CHAPTER LIST */
-/* ========================================= */
-
-/*
-    Expand:
-        3 cards → 5 cards
-
-    Collapse:
-        5 cards → 3 cards
-
-    Animasi hanya menggunakan height.
-*/
-
 function animateChapterList(
     previousHeight
 ) {
@@ -906,12 +762,12 @@ function animateChapterList(
         Tinggi target saat ini.
 
         Untuk expand:
-            semua card sudah visible.
+            semua card dah visible.
 
         Untuk collapse:
             card tambahan masih visible,
-            jadi kita hitung target dengan
-            menyembunyikannya sementara.
+            jadi itung target dengan
+            menyembunyikan sementara.
     */
 
     const collapsingCards =
@@ -928,7 +784,7 @@ function animateChapterList(
     ) {
 
         /*
-            Hitung tinggi ketika hanya
+            Hitung tinggi pas cuma ada
             3 card yang terlihat.
         */
 
@@ -944,15 +800,6 @@ function animateChapterList(
 
         nextHeight =
             getChapterListHeight();
-
-
-        /*
-            Tampilkan kembali card.
-
-            Kita belum menghapusnya.
-            Mereka akan disembunyikan setelah
-            animasi selesai.
-        */
 
         collapsingCards.forEach(
             card => {
@@ -1053,7 +900,7 @@ function animateChapterList(
 
 
         /*
-            Kembalikan container ke kondisi
+            Kembaliian container ke kondisi
             normal/responsive.
         */
 
@@ -1136,13 +983,6 @@ function animateChapterList(
 /* VIEW ALL / SHOW LESS */
 /* ========================================= */
 
-/*
-    View All / Show Less adalah satu-satunya
-    tombol yang menggunakan transition.
-
-    Toggle dan Sort tetap instant.
-*/
-
 viewAllButton.addEventListener(
     "click",
     () => {
@@ -1167,29 +1007,17 @@ viewAllButton.addEventListener(
             ];
 
 
-        /*
-            Tentukan jenis transition
-            berdasarkan kondisi saat ini.
-        */
-
         const mode =
             currentExpanded
                 ? "collapse"
                 : "expand";
 
 
-        /*
-            Ubah state expanded.
-        */
-
         state.expanded[
             state.version
         ] = !currentExpanded;
 
 
-        /*
-            Render menggunakan transition.
-        */
 
         renderChapters(
             mode
@@ -1205,26 +1033,12 @@ viewAllButton.addEventListener(
 /* TOGGLE VERSION */
 /* ========================================= */
 
-/*
-    Final / Rough.
-
-    Behavior tetap instant seperti
-    baseline sebelumnya.
-*/
-
 toggleButtons.forEach(
     button => {
 
         button.addEventListener(
             "click",
             () => {
-
-                /*
-                    Kalau kebetulan user menekan
-                    Toggle ketika transition masih
-                    berjalan, jangan biarkan style
-                    transition tertinggal.
-                */
 
                 if (
                     isChapterListTransitioning
@@ -1265,10 +1079,6 @@ toggleButtons.forEach(
                     }
                 );
 
-
-                /*
-                    Toggle tetap instant.
-                */
 
                 renderChapters(
                     "instant"
@@ -1336,11 +1146,6 @@ sortOptions.forEach(
 
                 event.stopPropagation();
 
-
-                /*
-                    Sort tetap instant.
-                */
-
                 if (
                     isChapterListTransitioning
                 ) {
@@ -1353,19 +1158,9 @@ sortOptions.forEach(
                 state.sort =
                     option.dataset.sort;
 
-
-                /*
-                    Update label Sort By.
-                */
-
                 sortButton.textContent =
                     option.textContent +
                     " ▾";
-
-
-                /*
-                    Tutup dropdown.
-                */
 
                 state.sortOpen =
                     false;
@@ -1381,10 +1176,6 @@ sortOptions.forEach(
                     "false"
                 );
 
-
-                /*
-                    Render tanpa transition.
-                */
 
                 renderChapters(
                     "instant"
@@ -1438,17 +1229,6 @@ document.addEventListener(
 /* RESET ACTIVE TRANSITION */
 /* ========================================= */
 
-/*
-    Membatalkan transition yang sedang berjalan.
-
-    Dipakai ketika user mengganti:
-    - Final / Rough
-    - Sort
-
-    supaya style transition tidak tertinggal
-    ketika list langsung dirender ulang.
-*/
-
 function resetChapterListTransition() {
 
     const collapsingCards =
@@ -1456,10 +1236,6 @@ function resetChapterListTransition() {
             '[data-collapse="true"]'
         );
 
-
-    /*
-        Hapus tanda collapse.
-    */
 
     collapsingCards.forEach(
         card => {
@@ -1470,19 +1246,11 @@ function resetChapterListTransition() {
     );
 
 
-    /*
-        Matikan transition sementara.
-    */
-
     chapterList.style.transition =
         "none";
 
 
-    /*
-        Kembalikan tinggi container
-        ke kondisi normal.
-    */
-
+    
     chapterList.style.height =
         "auto";
 
@@ -1490,10 +1258,6 @@ function resetChapterListTransition() {
     chapterList.style.overflow =
         "";
 
-
-    /*
-        Reset transition state.
-    */
 
     isChapterListTransitioning =
         false;
@@ -1506,13 +1270,6 @@ function resetChapterListTransition() {
 /* ========================================= */
 /* INITIALIZE */
 /* ========================================= */
-
-/*
-    Menyiapkan kondisi awal Chapter List.
-
-    Initialize hanya dijalankan sekali
-    ketika script selesai dimuat.
-*/
 
 function initializeChapterList() {
 
@@ -1534,11 +1291,6 @@ function initializeChapterList() {
                 isActive
             );
 
-
-            /*
-                Tetap menggunakan aria-pressed
-                dari sistem toggle yang sudah ada.
-            */
 
             button.setAttribute(
                 "aria-pressed",
@@ -1570,11 +1322,6 @@ function initializeChapterList() {
     );
 
 
-    /*
-        Cari option yang sesuai dengan
-        sort default.
-    */
-
     const initialSortOption =
         Array.from(
             sortOptions
@@ -1584,10 +1331,6 @@ function initializeChapterList() {
                 state.sort
         );
 
-
-    /*
-        Tampilkan label sort awal.
-    */
 
     if (
         initialSortOption
@@ -1606,13 +1349,6 @@ function initializeChapterList() {
     /* INITIAL RENDER */
     /* ========================================= */
 
-    /*
-        Initial render selalu instant.
-
-        Jadi saat halaman pertama dibuka,
-        tidak ada animasi expand/collapse.
-    */
-
     renderChapters(
         "instant"
     );
@@ -1625,9 +1361,5 @@ function initializeChapterList() {
 /* ========================================= */
 /* START */
 /* ========================================= */
-
-/*
-    Jalankan Chapter List.
-*/
 
 initializeChapterList();
