@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Story</title>
+  <link rel="stylesheet" href="../css/shell.css">
+  <link rel="stylesheet" href="./chapter.css">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+</head>
+<body>
+  <main>
+    <section class="chapter-hero" aria-labelledby="main-story-title">
+      <div class="chapter-hero__media" aria-hidden="true"></div>
+      <div class="chapter-hero__overlay" aria-hidden="true"></div>
+      <div class="chapter-hero__content">
+        <div class="chapter-page-container">
+          <nav class="chapter-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a><span aria-hidden="true">›</span><strong>Bloodveil Dawn</strong>
+          </nav>
+          <div class="chapter-hero__layout">
+            <aside class="chapter-cover">
+              <div class="chapter-cover__image">
+                <img src="https://res.cloudinary.com/q8roiivw/image/upload/bloodveil_cover.jpg" alt="Bloodveil Dawn cover">
+                <span class="chapter-cover__badge">MAIN STORY</span>
+              </div>
+            </aside>
+            <article class="chapter-hero__info">
+              <p class="chapter-kicker">COMIC SERIES</p>
+              <h1 id="main-story-title">Bloodveil Dawn</h1>
+              <div class="chapter-genres" aria-label="Genres">
+                <span>Fantasy</span><span>Action</span><span>Drama</span><span>Mystery</span>
+              </div>
+              <section class="chapter-summary">
+                <h2>Summary</h2>
+                <p>Di tengah masa yang penuh kekacauan, berbagai pihak memutuskan untuk menyatukan kekuatan demi menghentikan ancaman Guild kriminal yang selama ini terus memperluas pengaruh dan dominasinya di berbagai penjuru dunia, Schattenstejrn.</p>
+                <p>Dengan tujuan membebaskan dunia dari teror yang telah lama mencekamnya, Rosennoire menjadi salah satu Guild yang turut mengambil peran dalam misi tersebut.</p>
+                <p>Namun, ketika gelapnya masa penuh darah terasa seperti batas terakhir peradaban...</p>
+                <p>Masih adakah harapan bagi umat manusia untuk menyaksikan terbitnya cahaya?</p>
+              </section>
+              <section class="chapter-meta" aria-label="Series metadata">
+                <div><img src="../assets/chapter/meta/status.png" alt="" aria-hidden="true"><span>Status</span><strong>Ongoing</strong></div>
+                <div><img src="../assets/chapter/meta/demographic.png" alt="" aria-hidden="true"><span>Demographic</span><strong>Seinen</strong></div>
+                <div><img src="../assets/chapter/meta/published.png" alt="" aria-hidden="true"><span>Published</span><strong>2025</strong></div>
+                <div><img src="../assets/chapter/meta/author.png" alt="" aria-hidden="true"><span>Author</span><strong>Scinister</strong></div>
+                <div><img src="../assets/chapter/meta/language.png" alt="" aria-hidden="true"><span>Language</span><strong>Indonesian</strong></div>
+                <div><img src="../assets/chapter/meta/chapters.png" alt="" aria-hidden="true"><span>Chapters</span><strong id="chapterCount">3</strong></div>
+              </section>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter-section" aria-labelledby="chapter-list-title">
+      <div class="chapter-page-container">
+        <header class="chapter-header">
+          <h2 id="chapter-list-title">Chapter List</h2>
+          <div class="chapter-actions">
+            <div class="chapter-toggle" role="group" aria-label="Chapter version">
+              <button type="button" class="toggle-btn" data-version="final" aria-pressed="false"><span class="toggle-label-desktop">Final Ver</span><span class="toggle-label-mobile">Final</span></button>
+              <button type="button" class="toggle-btn active" data-version="rough" aria-pressed="true"><span class="toggle-label-desktop">Rough Ver</span><span class="toggle-label-mobile">Rough</span></button>
+            </div>
+            <div class="sort">
+              <button type="button" class="sort-btn" aria-expanded="false" aria-haspopup="true">Oldest <span aria-hidden="true">▾</span></button>
+              <div class="sort-dropdown" role="menu">
+                <button type="button" data-sort="latest" role="menuitem">Latest</button>
+                <button type="button" data-sort="oldest" role="menuitem">Oldest</button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="chapter-list" id="chapterList"></div>
+        <div class="chapter-empty" id="chapterEmpty" hidden>No chapters are currently available in this version.</div>
+        <div class="chapter-footer"><button type="button" id="viewAllBtn" class="view-all-btn">View All Chapters</button></div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="../js/shell.js"></script>
+  <script type="module" src="./chapter.js"></script>
+</body>
+</html>

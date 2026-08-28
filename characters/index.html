@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+    <link rel="stylesheet" href="../css/shell.css">
+    <link rel="stylesheet" href="../css/characters.css">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+</head>
+<body>
+    <main>
+        <header class="characters-header">
+            <span class="characters-header__kicker">Bloodveil Dawn</span>
+            <h1>Characters</h1>
+            <p>Discover and get to know The Bloodveil Dawn Characters that capture your interest.</p>
+        </header>
+
+        <section class="character-controls" aria-label="Character controls">
+            <div class="character-search">
+                <label for="character-search">Search characters</label>
+                <div class="character-search__field">
+                    <input type="search" id="character-search"
+                        placeholder="Search by name or alias..." autocomplete="off">
+                    <button type="button" class="character-search__clear" id="character-search-clear" aria-label="Clear character search" hidden>×</button>
+                </div>
+            </div>
+
+            <div class="character-sort">
+                <label id="character-sort-label">Sort by</label>
+                <select id="character-sort" class="character-sort__native" tabindex="-1" aria-hidden="true">
+                    <option value="az">A ⇄ Z</option>
+                    <option value="za">Z ⇄ A</option>
+                    <option value="oldest">Oldest ⇄ Youngest</option>
+                    <option value="youngest">Youngest ⇄ Oldest</option>
+                </select>
+                <div class="character-sort__custom" data-sort-dropdown>
+                    <button type="button" class="character-sort__trigger" id="character-sort-trigger" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="character-sort-label character-sort-value">
+                        <span id="character-sort-value">A ⇄ Z</span>
+                        <span class="character-sort__chevron" aria-hidden="true"></span>
+                    </button>
+                    <div class="character-sort__menu" id="character-sort-menu" role="listbox" aria-labelledby="character-sort-label" hidden>
+                        <button type="button" class="character-sort__option is-selected" role="option" aria-selected="true" data-sort-option="az">A ⇄ Z</button>
+                        <button type="button" class="character-sort__option" role="option" aria-selected="false" data-sort-option="za">Z ⇄ A</button>
+                        <button type="button" class="character-sort__option" role="option" aria-selected="false" data-sort-option="oldest">Oldest ⇄ Youngest</button>
+                        <button type="button" class="character-sort__option" role="option" aria-selected="false" data-sort-option="youngest">Youngest ⇄ Oldest</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="character-results" aria-live="polite">
+            <p class="character-results__count" id="character-results-count"></p>
+        </div>
+
+        <section class="character-grid" id="character-grid" aria-label="Character list"></section>
+
+        <p class="character-empty" id="character-empty" hidden>
+            <strong>No characters found</strong>
+            <span>Try a different name, family name, or alias.</span>
+        </p>
+    </main>
+
+    <script type="module" src="../js/shell.js"></script>
+    <script type="module" src="../js/characters.js"></script>
+</body>
+</html>

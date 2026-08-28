@@ -1,0 +1,294 @@
+* { box-sizing: border-box; }
+:root {
+  --pedia-bg: #0f1014;
+  --pedia-panel: #1a1c22;
+  --pedia-border: rgba(255,255,255,.08);
+  --pedia-text: #f2f2f3;
+  --pedia-muted: #a4a8b2;
+  --pedia-accent: #c43737;
+  --pedia-width: 1240px;
+}
+body {
+  margin: 0;
+  background: var(--pedia-bg);
+  color: var(--pedia-text);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+main {
+  width: min(var(--pedia-width), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 110px;
+}
+.pedia-kicker {
+  margin: 0 0 8px;
+  color: var(--pedia-muted);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.pedia-title {
+  margin: 0;
+  font-family: "Trajan Pro", Trajan, Cinzel, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.02em;
+}
+.pedia-intro {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--pedia-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.pedia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 46px;
+}
+.pedia-card {
+  display: block;
+  min-height: 190px;
+  padding: 28px;
+  background: var(--pedia-panel);
+  border: 1px solid var(--pedia-border);
+  color: var(--pedia-text);
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.pedia-card:hover,
+.pedia-card:focus-visible {
+  border-color: var(--pedia-accent);
+  background: #17191f;
+  transform: translateY(-2px);
+}
+.pedia-card:focus-visible { outline: 1px solid var(--pedia-text); outline-offset: 3px; }
+.pedia-card__kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--pedia-muted);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.pedia-card h2 {
+  margin: 0;
+  font-family: "Trajan Pro", Trajan, Cinzel, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.pedia-card p {
+  max-width: 560px;
+  margin: 12px 0 0;
+  color: var(--pedia-muted);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+.pedia-card__arrow {
+  display: block;
+  margin-top: 20px;
+  color: var(--pedia-muted);
+  font-size: .82rem;
+  font-weight: 600;
+  text-align: right;
+}
+.pedia-entry {
+  width: 100%;
+}
+.pedia-breadcrumb { display:flex; align-items:center; gap:9px; margin-top:18px; margin-bottom:32px; color:var(--pedia-muted); font-size:.84rem; }
+.pedia-breadcrumb a { color:var(--pedia-muted); text-decoration:none; transition:color .18s ease; }
+.pedia-breadcrumb a:hover,.pedia-breadcrumb a:focus-visible { color:var(--pedia-text); }
+.pedia-breadcrumb span { opacity:.55; }
+.pedia-breadcrumb strong { color:var(--pedia-text); font-weight:600; }
+.pedia-panel {
+  margin-top: 34px;
+  padding: 28px 30px;
+  background: var(--pedia-panel);
+  border: 1px solid var(--pedia-border);
+}
+.pedia-panel dl { margin: 0; }
+.pedia-panel dt {
+  margin-top: 22px;
+  color: var(--pedia-muted);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.pedia-panel dt:first-child { margin-top: 0; }
+.pedia-panel dd {
+  margin: 6px 0 0;
+  color: var(--pedia-text);
+  line-height: 1.7;
+}
+@media (max-width: 640px) {
+  main { width: calc(100% - 28px); padding-top: 28px; }
+  .pedia-grid { grid-template-columns: 1fr; margin-top: 34px; }
+  .pedia-card { min-height: 0; padding: 24px; }
+  .pedia-panel { padding: 24px 20px; }
+}
+
+.pedia-section-title {
+  margin: 0;
+  font-family: "Trajan Pro", Trajan, Cinzel, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: .01em;
+}
+.calendar-panel { overflow: hidden; }
+.calendar-month-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+  gap: 0;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--pedia-border);
+  border-left: 1px solid var(--pedia-border);
+}
+.calendar-month-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  padding: 12px 14px;
+  border-right: 1px solid var(--pedia-border);
+  border-bottom: 1px solid var(--pedia-border);
+}
+.calendar-month-number {
+  color: var(--pedia-muted);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.calendar-month-name { font-weight: 600; }
+.calendar-facts { margin-top: 20px; }
+.calendar-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.calendar-facts-grid > div,
+.how-it-works-grid > article {
+  padding: 18px;
+  border: 1px solid var(--pedia-border);
+  background: rgba(255,255,255,.015);
+}
+.calendar-facts-grid strong,
+.calendar-facts-grid span { display: block; }
+.calendar-facts-grid strong {
+  color: var(--pedia-muted);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.calendar-facts-grid span { margin-top: 7px; line-height: 1.5; }
+.organization-structure { margin-top: 46px; }
+.organization-section-heading { margin-bottom: 24px; }
+.organization-branch + .organization-branch { margin-top: 28px; }
+.organization-branch {
+  padding: 22px;
+  border: 1px solid var(--pedia-border);
+  background: var(--pedia-panel);
+}
+.organization-branch__header {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--pedia-border);
+}
+.organization-branch__label {
+  display: block;
+  color: var(--pedia-muted);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.organization-branch__header h3 {
+  margin: 8px 0 0;
+  font-family: "Trajan Pro", Trajan, Cinzel, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+.organization-branch__header p {
+  margin: 7px 0 0;
+  color: var(--pedia-muted);
+  line-height: 1.55;
+}
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.division-card {
+  position: relative;
+  min-width: 0;
+  padding: 20px 20px 19px 54px;
+  border: 1px solid var(--pedia-border);
+  background: rgba(255,255,255,.012);
+}
+.division-number {
+  position: absolute;
+  top: 19px;
+  left: 18px;
+  color: var(--pedia-muted);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.division-card h4 {
+  margin: 0;
+  font-family: "Trajan Pro", Trajan, Cinzel, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.division-card dl { margin: 15px 0 0; }
+.division-card dt {
+  margin-top: 14px;
+  color: var(--pedia-muted);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.division-card dt:first-child { margin-top: 0; }
+.division-card dd { margin: 6px 0 0; line-height: 1.6; }
+.division-card ul { margin: 0; padding-left: 18px; }
+.how-it-works { margin-top: 28px; }
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.how-it-works-grid h3 {
+  margin: 0;
+  font-family: "Trajan Pro", Trajan, Cinzel, "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.how-it-works-grid p { margin: 8px 0 0; color: var(--pedia-muted); line-height: 1.6; }
+
+@media (max-width: 760px) {
+  .calendar-month-list { grid-template-rows: none; grid-auto-flow: row; }
+  .calendar-month-list,
+  .division-grid,
+  .calendar-facts-grid,
+  .how-it-works-grid { grid-template-columns: 1fr; }
+  .organization-branch { padding: 18px; }
+  .division-card { padding-left: 50px; }
+}
+
+@media (max-width: 640px) {
+  .calendar-month-item { min-height: 52px; }
+}

@@ -1,315 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Bloodveil Dawn</title>
-
-    <link rel="icon" href="images/favicon.png">
-
-    <!-- Fonts:
-         Segoe UI is the shared UI/body font.
-         Cinzel remains exclusive to the Hero title. -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="chapter-landing.css"
-    >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloodveil Dawn</title>
+  <link rel="stylesheet" href="./css/shell.css">
+  <link rel="stylesheet" href="./css/home.css">
+<link rel="icon" type="image/png" href="assets/icon.png">
 </head>
-
 <body>
-
-<header class="site-header">
-    <a href="#" class="site-logo">
-        <img class="site-logo-icon" src="images/favicon.png">
-        <span>Bloodveil Dawn</span>
-    </a>
-</header>
-
-    <main>
-
-        <!-- ========================================= -->
-        <!-- HERO -->
-        <!-- ========================================= -->
-
-        <section class="hero">
-
-            <div class="hero-media">
-                <img
-                    src="images/background.jpg"
-                    alt="Bloodveil Dawn"
-                    class="hero-bg"
-                >
-
-                <div class="hero-overlay"></div>
-            </div>
-
-            <div class="hero-content">
-
-                <div class="page-container">
-
-                    <nav class="breadcrumb">
-                        <a href="#">Home</a>
-                        <span>›</span>
-                        <strong>Bloodveil Dawn</strong>
-                    </nav>
-
-                    <div class="hero-layout">
-
-                        <aside class="hero-cover">
-                            <div class="cover-image">
-
-                                <img
-                                    src="https://res.cloudinary.com/q8roiivw/image/upload/bloodveil_cover.jpg"
-                                    alt="Bloodveil Dawn"
-                                >
-
-                                <span class="cover-badge">
-                                    MAIN STORY
-                                </span>
-
-                            </div>
-                        </aside>
-
-                        <article class="hero-info">
-
-                            <span class="hero-category">
-                                COMIC SERIES
-                            </span>
-
-                            <h1 class="hero-title">
-                                Bloodveil Dawn
-                            </h1>
-
-                            <div class="hero-genres">
-                                <span>Fantasy</span>
-                                <span>Action</span>
-                                <span>Drama</span>
-                                <span>Mystery</span>
-                            </div>
-
-                            <section class="hero-synopsis">
-
-                                <h2>Summary</h2>
-
-                                <p>
-                                    Di tengah masa yang penuh kekacauan, berbagai pihak memutuskan untuk menyatukan kekuatan demi menghentikan ancaman 
-                                    Guild kriminal yang selama ini terus memperluas pengaruh dan dominasinya di berbagai penjuru dunia, Schattenstejrn.
-                                </p>
-                                <p>
-                                    Dengan tujuan membebaskan dunia dari teror yang telah lama mencekamnya, Rosennoire menjadi salah satu Guild yang turut mengambil peran dalam misi tersebut.
-                                </p>
-                                <p>
-                                    Namun, ketika gelapnya masa penuh darah terasa seperti batas terakhir peradaban...
-                                </p>
-                                <p>
-                                    Masih adakah harapan bagi umat manusia untuk menyaksikan terbitnya cahaya?
-                                </p>
-
-                            </section>
-
-                            <section class="hero-meta">
-
-                                <div class="meta-item">
-                                    <img src="icons/status.png" alt="">
-                                    <div>
-                                        <small>Status</small>
-                                        <strong>Ongoing</strong>
-                                    </div>
-                                </div>
-
-                                <div class="meta-item">
-                                    <img src="icons/demographic.png" alt="">
-                                    <div>
-                                        <small>Demographic</small>
-                                        <strong>Seinen</strong>
-                                    </div>
-                                </div>
-
-                                <div class="meta-item">
-                                    <img src="icons/published.png" alt="">
-                                    <div>
-                                        <small>Published</small>
-                                        <strong>2025</strong>
-                                    </div>
-                                </div>
-                                <div class="meta-item">
-                                    <img src="icons/author.png" alt="">
-                                    <div>
-                                        <small>Author</small>
-                                        <strong>Scinister</strong>
-                                    </div>
-                                </div>
-
-                                <div class="meta-item">
-                                    <img src="icons/language.png" alt="">
-                                    <div>
-                                        <small>Language</small>
-                                        <strong>Indonesian</strong>
-                                    </div>
-                                </div>
-
-                                <div class="meta-item">
-                                    <img src="icons/chapters.png" alt="">
-                                    <div>
-                                        <small>Chapters</small>
-                                        <strong>3</strong>
-                                    </div>
-                                </div>
-
-
-                            </section>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================= -->
-        <!-- CHAPTER LIST -->
-        <!-- ========================================= -->
-
-        <section class="chapter-section">
-
-            <div class="chapter-header">
-
-                <h2>
-                    Chapter List
-                </h2>
-
-                <div class="chapter-actions">
-
-                    <div
-                        class="chapter-toggle"
-                        role="group"
-                        aria-label="Chapter version"
-                    >
-
-                        <button
-                            type="button"
-                            class="toggle-btn active"
-                            data-version="final"
-                            aria-pressed="true"
-                        >
-                            <span class="toggle-label-desktop">Final Ver</span>
-                            <span class="toggle-label-mobile">Final</span>
-                        </button>
-
-                        <button
-                            type="button"
-                            class="toggle-btn"
-                            data-version="rough"
-                            aria-pressed="false"
-                        >
-                            <span class="toggle-label-desktop">Rough Ver</span>
-                            <span class="toggle-label-mobile">Rough</span>
-                        </button>
-
-                    </div>
-
-                    <div class="sort">
-
-                        <button
-                            type="button"
-                            class="sort-btn"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                        >
-                            Latest ▾
-                        </button>
-
-                        <div
-                            class="sort-dropdown"
-                            role="menu"
-                        >
-
-                            <button
-                                type="button"
-                                data-sort="latest"
-                                role="menuitem"
-                            >
-                                Latest
-                            </button>
-
-                            <button
-                                type="button"
-                                data-sort="oldest"
-                                role="menuitem"
-                            >
-                                Oldest
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div
-                class="chapter-list"
-                id="chapterList"
-            ></div>
-
-            <div class="chapter-footer">
-
-                <button
-                    type="button"
-                    id="viewAllBtn"
-                    class="view-all-btn"
-                >
-                    View All Chapters
-                </button>
-
-            </div>
-
-        </section>
-
-    </main>
-
-<footer class="site-footer">
-
-    <div class="site-footer-brand">
-        <span>BloodveiL</span>
-        <span>dawn</span>
-    </div>
-
-    <div class="site-footer-version">
-        Beta Version 0.0.1
-    </div>
-
-    <div class="site-footer-copy">
-        © 2025 Scinister
-    </div>
-
-</footer>
-
-    <script src="chapter-landing.js"></script>
-
+  <main class="home-page">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-slideshow" aria-hidden="true">
+        <div class="home-slide-track">
+          <div class="home-slide"><img src="./assets/home/preview1.jpg" alt="" decoding="async"></div>
+          <div class="home-slide"><img src="./assets/chapter/background.jpg" alt="" decoding="async"></div>
+          <div class="home-slide"><img src="./assets/home/preview3.jpg" alt="" decoding="async"></div>
+          <div class="home-slide" aria-hidden="true"><img src="./assets/home/preview1.jpg" alt="" decoding="async"></div>
+        </div>
+      </div>
+      <div class="home-hero__overlay" aria-hidden="true"></div>
+      <div class="home-hero__content">
+        <p class="home-hero__kicker">Welcome to the official website of</p>
+        <h1 id="home-title"><span>BloodveiL</span><span class="home-hero__title-sub">dawn</span></h1>
+        <a class="home-read-now" href="./chapter/index.html">Read Now</a>
+      </div>
+    </section>
+
+    <section class="home-quicknav" aria-labelledby="quicknav-title">
+      <div class="home-container">
+        <p class="home-section-kicker" id="quicknav-title">Explore</p>
+        <nav class="home-quicknav__grid" aria-label="Quick navigation">
+          <a class="home-quick-card" href="./chapter/index.html"><span>Main Story</span><small>Read The Story</small></a>
+          <a class="home-quick-card" href="./characters/index.html"><span>Characters</span><small>Meet The Cast</small></a>
+          <a class="home-quick-card" href="./bloodveilpedia/index.html"><span>Bloodveilpedia</span><small>Explore The World</small></a>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./js/shell.js"></script>
+  <script type="module" src="./js/home.js"></script>
 </body>
 </html>
