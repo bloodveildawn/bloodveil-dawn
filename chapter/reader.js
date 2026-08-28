@@ -92,7 +92,7 @@ function renderContinueCard() {
   const currentIndex = availableChapters.findIndex(c => c.number === chapter.number);
   const following = currentIndex >= 0 ? availableChapters[currentIndex + 1] : null;
   if (!following) {
-    mount.innerHTML = '<div class="continue-card latest"><p>Latest available chapter</p><strong>Stay Tuned for The Next Dawn</strong></div>';
+    mount.innerHTML = '<div class="continue-card latest"><p>You have reached the latest chapter available</p><strong>Stay Tuned for The Next Dawn</strong></div>';
     return;
   }
   const thumbnail = following.thumbnail ? `<img class="continue-thumbnail" src="${following.thumbnail}" alt="${following.title} thumbnail" loading="lazy" decoding="async">` : "";
