@@ -11,7 +11,7 @@ const character = {
             "Eulis"
         ]
     },
-    "quote": "Power is most useful when it knows precisely where not to be used.",
+    "quote": null,
     "portrait": "https://res.cloudinary.com/e39dadui/image/upload/clairischa.jpg",
     "landing": {
         "showOccupation": false,
