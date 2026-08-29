@@ -69,7 +69,7 @@ export const BLOODVEIL_MONTHS = {
     10: "Demerysch",
     11: "Belmora",
     12: "Seravelle",
-    13: "Zovraine",
+    13: "Zovarine",
     14: "Yisennouve",
     15: "Mythrena"
 };
