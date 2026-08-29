@@ -286,12 +286,6 @@ main {
     }
 }
 
-@media (max-width: 390px) {
-    .character-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* V4.5 polish */
 .character-search input[type="search"] {
     -webkit-appearance: none;
