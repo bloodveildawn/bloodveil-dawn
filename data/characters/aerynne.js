@@ -84,8 +84,8 @@ const character = {
         ]
     },
     "about": [
-    "Aerynne Carroise atau yang lebih dikenal dengan panggilan \"Eryn\" merupakan Senior Analyst di Divisi Records & Analysis Rosennoire. Pekerjannya menuntut ketelitian dalam mengolah dan menganalisis berbagai informasi yang seolah tidak pernah habis.",
-    "Mungkin itu sebabnya Eryn selalu terlihat seperti sesorang yang minim antusiasme ketika berinteraksi dengan orang-orang. Meskipun dengan pembawaan yang demikian, Eryn sama sekali tidak pernah mengurangi keseriusan dalam menjalani tugas."
+    "Aerynne Carroise atau yang lebih dikenal dengan panggilan \"Eryn\" merupakan Senior Analyst di Divisi Records & Analysis Rosennoire. Pekerjannya menuntut ketelitian dalam mengolah dan menganalisis berbagai informasi yang seolah tidak pernah ada habisnya.",
+    "Mungkin itu sebabnya Eryn selalu terlihat seperti sesorang yang minim antusiasme ketika berinteraksi dengan orang-orang. Meskipun dengan pembawaan yang demikian, Eryn sama sekali tidak pernah mengurangi keseriusannya dalam menjalani tugas."
 ],
     "referenceBoard": [],
     "information": {

@@ -57,7 +57,7 @@ const character = {
             "rank": "High Commander",
             "residence": [
                 {
-                    "value": "Solarys"
+                    "value": "Asteria"
                 }
             ]
         },
