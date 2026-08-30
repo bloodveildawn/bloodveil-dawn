@@ -237,8 +237,8 @@ const chapter = {
         "alt": "1st Dawn — Page 58"
       },
       {
-        "src": "c001_10.jpg",
-        "alt": "1st Dawn — Page 10"
+        "src": "c001_60.jpg",
+        "alt": "1st Dawn — Page 60"
       },
       {
         "src": "c001_61.jpg",
