@@ -101,6 +101,10 @@ const chapter = {
         "alt": "3rd Dawn — Page 22"
       },
       {
+        "src": "https://res.cloudinary.com/q8roiivw/image/upload/c003_23.jpg",
+        "alt": "3rd Dawn — Page 23"
+      },
+      {
         "src": "https://res.cloudinary.com/q8roiivw/image/upload/c000_03.jpg",
         "alt": "More to come"
       },
