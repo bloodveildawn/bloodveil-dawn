@@ -3,7 +3,7 @@ const chapter = {
   "displayStatus": "Incomplete",
   "title": "3rd Dawn: A Silenced Warmth Amidst a Roaring Storm",
   "thumbnail": "https://res.cloudinary.com/q8roiivw/image/upload/c003.jpg",
-  "date": "Updated 23 July 2026",
+  "date": "Updated 31 August 2026",
   "rough": {
     "available": true,
     "id": "rough-003",
