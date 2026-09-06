@@ -3,7 +3,7 @@ const chapter = {
   "displayStatus": "Incomplete",
   "title": "3rd Dawn: A Silenced Warmth Amidst a Roaring Storm",
   "thumbnail": "https://res.cloudinary.com/q8roiivw/image/upload/c003.jpg",
-  "date": "Updated 31 August 2026",
+  "date": "Updated 6 September 2026",
   "rough": {
     "available": true,
     "id": "rough-003",
@@ -103,6 +103,18 @@ const chapter = {
       {
         "src": "https://res.cloudinary.com/q8roiivw/image/upload/c003_23.jpg",
         "alt": "3rd Dawn — Page 23"
+      },
+      {
+        "src": "https://res.cloudinary.com/q8roiivw/image/upload/c003_24.jpg",
+        "alt": "3rd Dawn — Page 24"
+      },
+      {
+        "src": "https://res.cloudinary.com/q8roiivw/image/upload/c003_25.jpg",
+        "alt": "3rd Dawn — Page 25"
+      },
+      {
+        "src": "https://res.cloudinary.com/q8roiivw/image/upload/c003_26.jpg",
+        "alt": "3rd Dawn — Page 26"
       },
       {
         "src": "https://res.cloudinary.com/q8roiivw/image/upload/c000_03.jpg",
